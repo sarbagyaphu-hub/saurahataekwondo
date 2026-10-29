@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -477,6 +478,8 @@ footer p{grid-column:1/-1;color:#5f6b7a;font-size:.67rem;border-top:1px solid va
       <div class="hero-bg">
         <!-- REPLACE THIS DEMO HERO IMAGE URL WITH YOUR REAL TAEKWONDO / SAURAHA PHOTO -->
         <img src="https://i.ibb.co/PGGT7QBm/mee.png" alt="" aria-hidden="true" />
+      </div>
+
       </div>
       <div class="hero-grid"></div>
       <div class="hero-glow hero-glow-one"></div>
@@ -1471,5 +1474,258 @@ $("#sendEmail")?.addEventListener("click", () => {
 });
 
 </script>
+
+<!-- ==========================================
+     REGISTRATION CLOSED — SAURAHA OPEN 2026
+     ========================================== -->
+
+<style>
+  #registrationClosedOverlay {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(3, 9, 18, 0.88);
+    backdrop-filter: blur(10px);
+  }
+
+  #registrationClosedOverlay.active {
+    display: flex;
+  }
+
+  .closed-notice-card {
+    width: min(100%, 460px);
+    background: #ffffff;
+    color: #07111f;
+    border-radius: 26px;
+    padding: 42px 30px;
+    text-align: center;
+    box-shadow: 0 30px 90px rgba(0,0,0,.45);
+    animation: closedNoticePop .3s ease-out;
+  }
+
+  .closed-notice-icon {
+    font-size: 56px;
+    margin-bottom: 18px;
+  }
+
+  .closed-notice-kicker {
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 900;
+    color: #8793a3;
+    margin-bottom: 12px;
+  }
+
+  .closed-notice-card h2 {
+    color: #e6283f;
+    font-size: clamp(26px, 5vw, 34px);
+    line-height: 1.2;
+    font-weight: 900;
+    margin: 0 0 18px;
+  }
+
+  .closed-notice-card p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #566273;
+    margin-bottom: 26px;
+  }
+
+  #closeRegistrationNotice {
+    border: none;
+    background: #e6283f;
+    color: #fff;
+    padding: 15px 35px;
+    border-radius: 999px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: background .2s ease;
+  }
+
+  #closeRegistrationNotice:hover {
+    background: #b91d32;
+  }
+
+  @keyframes closedNoticePop {
+    from {
+      opacity: 0;
+      transform: translateY(18px) scale(.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+</style>
+
+<div
+  id="registrationClosedOverlay"
+  role="dialog"
+  aria-modal="true"
+  aria-hidden="true"
+  aria-labelledby="registrationClosedTitle"
+>
+  <div class="closed-notice-card">
+    <div class="closed-notice-icon">🥋</div>
+
+    <div class="closed-notice-kicker">
+      SAURAHA OPEN 2026
+    </div>
+
+    <h2 id="registrationClosedTitle">
+      Registration is Closed
+    </h2>
+
+    <p>
+      Registration for the
+      <strong>
+        1st Sauraha International Open
+        Taekwondo Championship 2026
+      </strong>
+      is now officially closed.
+      <br><br>
+      Thank you for your overwhelming
+      interest and support.
+      <br><br>
+      We look forward to welcoming you
+      to Sauraha, Chitwan, Nepal.
+    </p>
+
+    <button id="closeRegistrationNotice" type="button">
+      OK, Understood
+    </button>
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  const overlay = document.getElementById(
+    "registrationClosedOverlay"
+  );
+
+  const closeButton = document.getElementById(
+    "closeRegistrationNotice"
+  );
+
+  let previousFocus = null;
+
+  function showRegistrationClosed() {
+    previousFocus = document.activeElement;
+
+    overlay.classList.add("active");
+    overlay.setAttribute("aria-hidden", "false");
+
+    document.body.style.overflow = "hidden";
+    closeButton.focus();
+  }
+
+  function closeRegistrationClosed() {
+    overlay.classList.remove("active");
+    overlay.setAttribute("aria-hidden", "true");
+
+    document.body.style.overflow = "";
+    previousFocus?.focus?.();
+  }
+
+  closeButton.addEventListener(
+    "click",
+    closeRegistrationClosed
+  );
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" &&
+        overlay.classList.contains("active")) {
+      closeRegistrationClosed();
+    }
+
+    if (event.key === "Tab" &&
+        overlay.classList.contains("active")) {
+      event.preventDefault();
+      closeButton.focus();
+    }
+  });
+
+  // Prevent registration links from opening the form.
+  document.addEventListener("click", function (event) {
+    const link = event.target.closest('a[href="#register"]');
+
+    if (link) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      showRegistrationClosed();
+      return;
+    }
+
+    // Prevent interactions with registration fields
+    // and buttons while registration is closed.
+    const registrationControl = event.target.closest(
+      "#registrationForm input, " +
+      "#registrationForm select, " +
+      "#registrationForm textarea, " +
+      "#registrationForm button"
+    );
+
+    if (registrationControl) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      showRegistrationClosed();
+      return;
+    }
+
+    // Block any existing review modal send buttons.
+    const sendButton = event.target.closest(
+      "#sendWhatsApp, #sendEmail"
+    );
+
+    if (sendButton) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      showRegistrationClosed();
+    }
+  }, true);
+
+  // Block keyboard entry into the registration form.
+  document.addEventListener("focusin", function (event) {
+    if (
+      event.target.matches(
+        "#registrationForm input, " +
+        "#registrationForm select, " +
+        "#registrationForm textarea"
+      )
+    ) {
+      event.target.blur();
+      showRegistrationClosed();
+    }
+  }, true);
+
+  // Block form submission before original handlers run.
+  document.addEventListener("submit", function (event) {
+    if (event.target.id === "registrationForm") {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      showRegistrationClosed();
+    }
+  }, true);
+
+  // If a visitor opens the registration URL directly,
+  // display the closed notification.
+  if (window.location.hash === "#register") {
+    showRegistrationClosed();
+  }
+
+  window.addEventListener("hashchange", function () {
+    if (window.location.hash === "#register") {
+      showRegistrationClosed();
+    }
+  });
+})();
+</script>
+
 </body>
 </html>
