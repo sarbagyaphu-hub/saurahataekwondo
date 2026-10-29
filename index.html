@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -479,8 +478,6 @@ footer p{grid-column:1/-1;color:#5f6b7a;font-size:.67rem;border-top:1px solid va
         <!-- REPLACE THIS DEMO HERO IMAGE URL WITH YOUR REAL TAEKWONDO / SAURAHA PHOTO -->
         <img src="https://i.ibb.co/PGGT7QBm/mee.png" alt="" aria-hidden="true" />
       </div>
-
-      </div>
       <div class="hero-grid"></div>
       <div class="hero-glow hero-glow-one"></div>
       <div class="hero-glow hero-glow-two"></div>
@@ -880,16 +877,15 @@ footer p{grid-column:1/-1;color:#5f6b7a;font-size:.67rem;border-top:1px solid va
       <div class="container registration-layout">
         <div class="register-intro reveal">
           <div class="section-label">09 / ATHLETE REGISTRATION</div>
-          <h2>Enter the arena.<br /><span>Register now.</span></h2>
+          <h2>Registration<br /><span>is Closed.</span></h2>
           <p>
-            Complete the athlete information below. After review, choose WhatsApp or Email.
-            Your registration details will be automatically prepared as a message — no PDF and no attachment required.
+            Athlete registration is now closed. Thank you to all teams and athletes for their interest in the championship.
           </p>
 
           <div class="deadline-card">
             <small>FINAL REGISTRATION DEADLINE</small>
             <strong>20 OCTOBER 2026</strong>
-            <span>No registration will be accepted after the deadline.</span>
+            <span>Online registration is closed.</span>
           </div>
 
           <ul class="register-points">
@@ -899,155 +895,13 @@ footer p{grid-column:1/-1;color:#5f6b7a;font-size:.67rem;border-top:1px solid va
           </ul>
         </div>
 
-        <form class="registration-form reveal" id="registrationForm" novalidate>
-          <div class="form-head">
-            <div><span>ATHLETE ENTRY</span><strong>SAURAHA OPEN 2026</strong></div>
-            <span class="form-step" id="formStep">01 / 03</span>
-          </div>
-
-          <div class="registration-choice">
-            <div class="registration-choice-title">STEP 1 · REGISTRATION TYPE</div>
-            <div class="choice-grid">
-              <button class="choice-btn" type="button" data-reg-type="national">🇳🇵 National Registration<small>For Nepal-based teams</small></button>
-              <button class="choice-btn" type="button" data-reg-type="international">🌎 International Registration<small>For international teams</small></button>
-            </div>
-          </div>
-
-          <div class="registration-choice" id="nationalChoice" hidden>
-            <div class="registration-choice-title">STEP 2 · NATIONAL TEAM TYPE</div>
-            <div class="choice-grid">
-              <button class="choice-btn" type="button" data-team-type="province">Province Team<small>Select your province</small></button>
-              <button class="choice-btn" type="button" data-team-type="organizing">Organizing Team<small>Chitwan Taekwondo Dojang</small></button>
-            </div>
-          </div>
-
-          <div class="registration-choice" id="provinceChoice" hidden>
-            <div class="registration-choice-title">STEP 3 · SELECT PROVINCE</div>
-            <div class="choice-grid three">
-              <button class="choice-btn" type="button" data-province="Koshi Province">Koshi Province</button>
-              <button class="choice-btn" type="button" data-province="Madhesh Province">Madhesh Province</button>
-              <button class="choice-btn" type="button" data-province="Bagmati Province">Bagmati Province</button>
-              <button class="choice-btn" type="button" data-province="Gandaki Province">Gandaki Province</button>
-              <button class="choice-btn" type="button" data-province="Lumbini Province">Lumbini Province</button>
-              <button class="choice-btn" type="button" data-province="Karnali Province">Karnali Province</button>
-              <button class="choice-btn" type="button" data-province="Sudurpaschim Province">Sudurpaschim Province</button>
-            </div>
-          </div>
-
-          <div class="registration-context" id="registrationContext"></div>
-
-          <div class="form-grid">
-            <label class="full">
-              <span>Full Name *</span>
-              <input type="text" id="fullName" required placeholder="Athlete's full name" />
-            </label>
-
-            <label>
-              <span>Date of Birth *</span>
-              <input type="date" id="dob" required />
-            </label>
-
-            <label>
-              <span>Gender *</span>
-              <select id="gender" required>
-                <option value="">Select gender</option>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-              </select>
-            </label>
-
-            <label>
-              <span>Country *</span>
-              <input type="text" id="country" required placeholder="Country" />
-            </label>
-
-            <label>
-              <span>Nationality</span>
-              <input type="text" id="nationality" placeholder="Nationality" />
-            </label>
-
-            <label class="full">
-              <span>Team / Dojang / Academy *</span>
-              <input type="text" id="team" required placeholder="Team or Dojang name" />
-            </label>
-
-            <label>
-              <span>Coach Name *</span>
-              <input type="text" id="coach" required placeholder="Coach / Team Manager" />
-            </label>
-
-            <label>
-              <span>Belt / Dan Grade *</span>
-              <select id="belt" required>
-                <option value="">Select grade</option>
-                <option>Color Belt</option>
-                <option>1st Poom</option><option>2nd Poom</option><option>3rd Poom</option>
-                <option>1st Dan</option><option>2nd Dan</option><option>3rd Dan</option>
-                <option>4th Dan</option><option>5th Dan or above</option>
-              </select>
-            </label>
-
-            <label>
-              <span>Competition *</span>
-              <select id="competition" required>
-                <option value="">Select event</option>
-                <option value="Kyorugi">Kyorugi</option>
-                <option value="Poomsae">Poomsae</option>
-                <option value="Kyorugi + Poomsae">Kyorugi + Poomsae</option>
-              </select>
-            </label>
-
-            <label>
-              <span>Body Weight (kg) *</span>
-              <input type="number" id="weight" min="15" max="200" step="0.1" required placeholder="e.g. 58.5" />
-            </label>
-
-            <div class="auto-result full" id="autoResult">
-              <span>AUTO CATEGORY</span>
-              <strong>Enter date of birth, gender and weight.</strong>
-              <small>The website will suggest the official category.</small>
-            </div>
-
-            <label>
-              <span>Phone / WhatsApp *</span>
-              <input type="tel" id="phone" required placeholder="+977 ..." />
-            </label>
-
-            <label>
-              <span>Email *</span>
-              <input type="email" id="email" required placeholder="athlete@example.com" />
-            </label>
-
-            <label>
-              <span>Passport / ID No.</span>
-              <input type="text" id="idNumber" placeholder="Passport / National ID / School ID" />
-            </label>
-
-            <label>
-              <span>Emergency Contact</span>
-              <input type="text" id="emergency" placeholder="Name / phone" />
-            </label>
-
-            <label class="full">
-              <span>Additional Note</span>
-              <textarea id="note" rows="4" placeholder="Any additional information for the organizing committee"></textarea>
-            </label>
-
-            <label class="full code-wrap">
-              <span>Registration Code *</span>
-              <input type="text" id="registrationCode" required autocomplete="off" placeholder="Select registration type first" disabled />
-              <small class="code-status" id="codeStatus"></small>
-            </label>
-
-            <label class="check full">
-              <input type="checkbox" id="declaration" required />
-              <span>I confirm that the information provided is correct and I agree to follow the championship rules and instructions.</span>
-            </label>
-          </div>
-
-          <button class="btn btn-primary submit-btn" type="submit">Review Registration <span>→</span></button>
-          <p class="form-error" id="formError" role="alert"></p>
-        </form>
+        <div class="registration-form reveal" id="registrationClosedCard" role="status" style="text-align:center;padding:55px 30px">
+          <div style="font-size:56px;margin-bottom:18px">🥋</div>
+          <div style="font-size:12px;letter-spacing:.18em;color:#7b8490;font-weight:900">SAURAHA OPEN 2026</div>
+          <h3 style="font-size:clamp(27px,4vw,40px);color:#e6283f;margin:15px 0">Registration is Closed</h3>
+          <p style="color:#596474;line-height:1.8">Registration for the <strong>1st Sauraha International Open Taekwondo Championship 2026</strong> is now officially closed.<br>Thank you for your interest and support.</p>
+          <button type="button" class="btn btn-primary" id="showClosedNotice" style="margin-top:18px">View Registration Notice</button>
+        </div>
       </div>
     </section>
 
@@ -1094,22 +948,6 @@ footer p{grid-column:1/-1;color:#5f6b7a;font-size:.67rem;border-top:1px solid va
   </footer>
 
   <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
-
-  <!-- Registration review modal -->
-  <div class="modal" id="reviewModal" aria-hidden="true">
-    <div class="modal-backdrop" data-close-modal></div>
-    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <button class="modal-close" type="button" data-close-modal aria-label="Close">×</button>
-      <span class="modal-kicker">REGISTRATION READY</span>
-      <h3 id="modalTitle">Review before sending</h3>
-      <div class="registration-preview" id="registrationPreview"></div>
-      <div class="modal-actions">
-        <button class="btn btn-whatsapp" id="sendWhatsApp" type="button">Send via WhatsApp</button>
-        <button class="btn btn-email" id="sendEmail" type="button">Send via Email</button>
-      </div>
-      <small class="modal-note">The selected app will open with the registration text already prepared. The participant only needs to press Send.</small>
-    </div>
-  </div>
 
   <script>
 /* =========================================================
@@ -1357,375 +1195,45 @@ function updateAutoResult(){
 }
 ["dob","gender","weight","competition"].forEach(id => $(`#${id}`)?.addEventListener("input", updateAutoResult));
 
-/* =========================================================
-   ADVANCED REGISTRATION ROUTING
-   ========================================================= */
-const registrationState={type:"",typeLabel:"",teamType:"",teamTypeLabel:"",province:""};
-const nationalChoice=$("#nationalChoice"), provinceChoice=$("#provinceChoice"), registrationContext=$("#registrationContext"), registrationCode=$("#registrationCode"), codeStatus=$("#codeStatus");
-function resetChoiceButtons(selector){$$(selector).forEach(btn=>btn.classList.remove("active"));}
-function updateRegistrationContext(){const parts=[registrationState.typeLabel,registrationState.teamTypeLabel,registrationState.province].filter(Boolean);if(!parts.length){registrationContext.classList.remove("show");registrationContext.textContent="";return;}registrationContext.innerHTML=`Selected: <span>${parts.join(" · ")}</span>`;registrationContext.classList.add("show");}
-function setCodeRequirement(){registrationCode.disabled=!registrationState.type;registrationCode.value="";codeStatus.textContent="";codeStatus.className="code-status";registrationCode.placeholder=registrationState.type?"Enter your registration code":"Select registration type first";}
-$$('[data-reg-type]').forEach(btn=>btn.addEventListener('click',()=>{resetChoiceButtons('[data-reg-type]');btn.classList.add('active');registrationState.type=btn.dataset.regType;registrationState.typeLabel=registrationState.type==='national'?'National':'International';registrationState.teamType="";registrationState.teamTypeLabel="";registrationState.province="";resetChoiceButtons('[data-team-type]');resetChoiceButtons('[data-province]');nationalChoice.hidden=registrationState.type!=='national';provinceChoice.hidden=true;$('#formStep').textContent=registrationState.type==='national'?'01 / 04':'01 / 03';setCodeRequirement();updateRegistrationContext();}));
-$$('[data-team-type]').forEach(btn=>btn.addEventListener('click',()=>{resetChoiceButtons('[data-team-type]');btn.classList.add('active');registrationState.teamType=btn.dataset.teamType;registrationState.teamTypeLabel=btn.dataset.teamType==='province'?'Province Team':'Organizing Team';registrationState.province="";resetChoiceButtons('[data-province]');provinceChoice.hidden=btn.dataset.teamType!=='province';$('#formStep').textContent=btn.dataset.teamType==='province'?'01 / 04':'01 / 03';setCodeRequirement();updateRegistrationContext();}));
-$$('[data-province]').forEach(btn=>btn.addEventListener('click',()=>{resetChoiceButtons('[data-province]');btn.classList.add('active');registrationState.province=btn.dataset.province;setCodeRequirement();updateRegistrationContext();}));
-registrationCode?.addEventListener('input',()=>{const expected=registrationState.type==='international'?CONFIG.registrationCodes.international:registrationState.teamType==='organizing'?CONFIG.registrationCodes.organizing:CONFIG.registrationCodes.province;const entered=registrationCode.value.trim();if(!entered){codeStatus.textContent="";codeStatus.className="code-status";return;}const valid=entered.toLowerCase()===expected.toLowerCase();codeStatus.textContent=valid?'✓ Registration code verified':'✕ Code is incorrect';codeStatus.className=`code-status ${valid?'valid':'invalid'}`;});
-
-/* =========================================================
-   REGISTRATION MESSAGE
-   No PDF. No backend.
-   The website opens WhatsApp / Email with this text prepared.
-   ========================================================= */
-const form = $("#registrationForm");
-const modal = $("#reviewModal");
-let registrationMessage = "";
-
-function value(id){ return $(`#${id}`).value.trim(); }
-
-function buildRegistrationMessage(){
-  const auto = currentAutoCategory();
-  const submittedAt = new Intl.DateTimeFormat("en-GB", {
-    dateStyle:"medium", timeStyle:"short", timeZone:"Asia/Kathmandu"
-  }).format(new Date());
-
-  const lines = [
-    "🥋 SAURAHA OPEN 2026 — ATHLETE REGISTRATION",
-    "━━━━━━━━━━━━━━━━━━━━━━━━━━",
-    `Registration Type: ${registrationState.typeLabel || "—"}`,
-    `National Team Type: ${registrationState.teamTypeLabel || "—"}`,
-    `Province: ${registrationState.province || "—"}`,
-    `Registration Code: ${value("registrationCode")}`,
-    `Athlete Name: ${value("fullName")}`,
-    `Date of Birth: ${value("dob")}`,
-    `Age on Event Date: ${auto.age ?? "—"}`,
-    `Gender: ${value("gender")}`,
-    `Country: ${value("country")}`,
-    `Nationality: ${value("nationality") || "—"}`,
-    `Team / Dojang: ${value("team")}`,
-    `Coach: ${value("coach")}`,
-    `Belt / Dan: ${value("belt")}`,
-    `Competition: ${value("competition")}`,
-    `Body Weight: ${value("weight")} kg`,
-    `Age Division: ${auto.group || "—"}`,
-    `Suggested Kyorugi Category: ${auto.kyorugi || "—"}`,
-    `Poomsae Category: ${auto.poomsae || "—"}`,
-    `Phone / WhatsApp: ${value("phone")}`,
-    `Email: ${value("email")}`,
-    `Passport / ID No.: ${value("idNumber") || "—"}`,
-    `Emergency Contact: ${value("emergency") || "—"}`,
-    `Additional Note: ${value("note") || "—"}`,
-    "━━━━━━━━━━━━━━━━━━━━━━━━━━",
-    `Submitted: ${submittedAt} (Nepal Time)`,
-    "",
-    "I confirm that the above information is correct and agree to follow the championship rules and instructions."
-  ];
-  return lines.join("\n");
-}
-
-function openModal(){
-  $("#registrationPreview").textContent = registrationMessage;
-  modal.classList.add("open");
-  modal.setAttribute("aria-hidden","false");
-  document.body.classList.add("modal-open");
-}
-function closeModal(){
-  modal.classList.remove("open");
-  modal.setAttribute("aria-hidden","true");
-  document.body.classList.remove("modal-open");
-}
-$$("[data-close-modal]").forEach(el => el.addEventListener("click",closeModal));
-document.addEventListener("keydown",e => {if(e.key==="Escape") closeModal()});
-
-form?.addEventListener("submit", e => {
-  e.preventDefault();
-  $("#formError").textContent = "";
-  if (!registrationState.type){$("#formError").textContent="Please choose National or International registration first.";return;}
-  if (registrationState.type==="national"&&!registrationState.teamType){$("#formError").textContent="Please choose Province Team or Organizing Team.";return;}
-  if (registrationState.teamType==="province"&&!registrationState.province){$("#formError").textContent="Please select your province before continuing.";return;}
-  if (!form.checkValidity()){form.reportValidity();$("#formError").textContent="Please complete all required fields before continuing.";return;}
-  const expectedCode=registrationState.type==="international"?CONFIG.registrationCodes.international:registrationState.teamType==="organizing"?CONFIG.registrationCodes.organizing:CONFIG.registrationCodes.province;
-  if(value("registrationCode").toLowerCase()!==expectedCode.toLowerCase()){$("#formError").textContent="Please contact the organizer or your province team — your code is wrong.";registrationCode.focus();return;}
-  const age = ageOnEvent(value("dob"));
-  if (age === null || age < 0){
-    $("#formError").textContent = "Please enter a valid date of birth.";
-    return;
-  }
-  registrationMessage = buildRegistrationMessage();
-  openModal();
-});
-
-/* WhatsApp:
-   This opens a new WhatsApp chat addressed to the CONFIG number
-   with the registration text pre-filled. User presses Send.
-*/
-$("#sendWhatsApp")?.addEventListener("click", () => {
-  const number = CONFIG.whatsappNumber.replace(/\D/g,"");
-  const url = `https://wa.me/${number}?text=${encodeURIComponent(registrationMessage)}`;
-  window.open(url,"_blank","noopener");
-});
-
-/* Email:
-   mailto opens the visitor's email client with recipient, subject and body pre-filled.
-   User presses Send.
-*/
-$("#sendEmail")?.addEventListener("click", () => {
-  const subject = `${CONFIG.eventName} — Athlete Registration — ${value("fullName")}`;
-  const url = `mailto:${CONFIG.registrationEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(registrationMessage)}`;
-  window.location.href = url;
-});
-
 </script>
 
-<!-- ==========================================
-     REGISTRATION CLOSED — SAURAHA OPEN 2026
-     ========================================== -->
-
-<style>
-  #registrationClosedOverlay {
-    position: fixed;
-    inset: 0;
-    z-index: 99999;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    background: rgba(3, 9, 18, 0.88);
-    backdrop-filter: blur(10px);
-  }
-
-  #registrationClosedOverlay.active {
-    display: flex;
-  }
-
-  .closed-notice-card {
-    width: min(100%, 460px);
-    background: #ffffff;
-    color: #07111f;
-    border-radius: 26px;
-    padding: 42px 30px;
-    text-align: center;
-    box-shadow: 0 30px 90px rgba(0,0,0,.45);
-    animation: closedNoticePop .3s ease-out;
-  }
-
-  .closed-notice-icon {
-    font-size: 56px;
-    margin-bottom: 18px;
-  }
-
-  .closed-notice-kicker {
-    font-size: 11px;
-    letter-spacing: 2px;
-    font-weight: 900;
-    color: #8793a3;
-    margin-bottom: 12px;
-  }
-
-  .closed-notice-card h2 {
-    color: #e6283f;
-    font-size: clamp(26px, 5vw, 34px);
-    line-height: 1.2;
-    font-weight: 900;
-    margin: 0 0 18px;
-  }
-
-  .closed-notice-card p {
-    font-size: 15px;
-    line-height: 1.8;
-    color: #566273;
-    margin-bottom: 26px;
-  }
-
-  #closeRegistrationNotice {
-    border: none;
-    background: #e6283f;
-    color: #fff;
-    padding: 15px 35px;
-    border-radius: 999px;
-    font-weight: 800;
-    cursor: pointer;
-    transition: background .2s ease;
-  }
-
-  #closeRegistrationNotice:hover {
-    background: #b91d32;
-  }
-
-  @keyframes closedNoticePop {
-    from {
-      opacity: 0;
-      transform: translateY(18px) scale(.95);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-    }
-  }
-</style>
-
-<div
-  id="registrationClosedOverlay"
-  role="dialog"
-  aria-modal="true"
-  aria-hidden="true"
-  aria-labelledby="registrationClosedTitle"
->
-  <div class="closed-notice-card">
-    <div class="closed-notice-icon">🥋</div>
-
-    <div class="closed-notice-kicker">
-      SAURAHA OPEN 2026
+  <!-- Registration-closed popup. All registration form and outbound registration handlers removed. -->
+  <style>
+    #registrationClosedOverlay{display:none;position:fixed;inset:0;z-index:100000;align-items:center;justify-content:center;padding:20px;background:rgba(3,9,18,.88);backdrop-filter:blur(8px)}
+    #registrationClosedOverlay.active{display:flex}
+    .closed-popup{background:#fff;color:#07111f;width:min(100%,460px);padding:40px 30px;border-radius:25px;text-align:center;box-shadow:0 25px 90px rgba(0,0,0,.45)}
+    .closed-popup h2{color:#e6283f;font-size:clamp(27px,5vw,36px);margin:12px 0 18px}
+    .closed-popup p{color:#586475;line-height:1.8}
+    .closed-popup button{background:#e6283f;border:0;border-radius:999px;color:#fff;padding:14px 30px;font-weight:800;cursor:pointer;margin-top:14px}
+  </style>
+  <div id="registrationClosedOverlay" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="closedTitle">
+    <div class="closed-popup">
+      <div style="font-size:55px">🥋</div>
+      <div style="font-size:11px;letter-spacing:.18em;color:#788596;font-weight:900">SAURAHA OPEN 2026</div>
+      <h2 id="closedTitle">Registration is Closed</h2>
+      <p>Registration for the <strong>1st Sauraha International Open Taekwondo Championship 2026</strong> is now officially closed.<br><br>Thank you for your interest and support. We look forward to welcoming you to Sauraha, Chitwan, Nepal.</p>
+      <button type="button" id="closeRegistrationNotice">OK, Understood</button>
     </div>
-
-    <h2 id="registrationClosedTitle">
-      Registration is Closed
-    </h2>
-
-    <p>
-      Registration for the
-      <strong>
-        1st Sauraha International Open
-        Taekwondo Championship 2026
-      </strong>
-      is now officially closed.
-      <br><br>
-      Thank you for your overwhelming
-      interest and support.
-      <br><br>
-      We look forward to welcoming you
-      to Sauraha, Chitwan, Nepal.
-    </p>
-
-    <button id="closeRegistrationNotice" type="button">
-      OK, Understood
-    </button>
   </div>
-</div>
-
-<script>
-(function () {
-  "use strict";
-
-  const overlay = document.getElementById(
-    "registrationClosedOverlay"
-  );
-
-  const closeButton = document.getElementById(
-    "closeRegistrationNotice"
-  );
-
-  let previousFocus = null;
-
-  function showRegistrationClosed() {
-    previousFocus = document.activeElement;
-
-    overlay.classList.add("active");
-    overlay.setAttribute("aria-hidden", "false");
-
-    document.body.style.overflow = "hidden";
-    closeButton.focus();
-  }
-
-  function closeRegistrationClosed() {
-    overlay.classList.remove("active");
-    overlay.setAttribute("aria-hidden", "true");
-
-    document.body.style.overflow = "";
-    previousFocus?.focus?.();
-  }
-
-  closeButton.addEventListener(
-    "click",
-    closeRegistrationClosed
-  );
-
-  document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape" &&
-        overlay.classList.contains("active")) {
-      closeRegistrationClosed();
-    }
-
-    if (event.key === "Tab" &&
-        overlay.classList.contains("active")) {
-      event.preventDefault();
-      closeButton.focus();
-    }
-  });
-
-  // Prevent registration links from opening the form.
-  document.addEventListener("click", function (event) {
-    const link = event.target.closest('a[href="#register"]');
-
-    if (link) {
-      event.preventDefault();
-      event.stopImmediatePropagation();
-      showRegistrationClosed();
-      return;
-    }
-
-    // Prevent interactions with registration fields
-    // and buttons while registration is closed.
-    const registrationControl = event.target.closest(
-      "#registrationForm input, " +
-      "#registrationForm select, " +
-      "#registrationForm textarea, " +
-      "#registrationForm button"
-    );
-
-    if (registrationControl) {
-      event.preventDefault();
-      event.stopImmediatePropagation();
-      showRegistrationClosed();
-      return;
-    }
-
-    // Block any existing review modal send buttons.
-    const sendButton = event.target.closest(
-      "#sendWhatsApp, #sendEmail"
-    );
-
-    if (sendButton) {
-      event.preventDefault();
-      event.stopImmediatePropagation();
-      showRegistrationClosed();
-    }
-  }, true);
-
-  // Block keyboard entry into the registration form.
-  document.addEventListener("focusin", function (event) {
-    if (
-      event.target.matches(
-        "#registrationForm input, " +
-        "#registrationForm select, " +
-        "#registrationForm textarea"
-      )
-    ) {
-      event.target.blur();
-      showRegistrationClosed();
-    }
-  }, true);
-
-  // Block form submission before original handlers run.
-  document.addEventListener("submit", function (event) {
-    if (event.target.id === "registrationForm") {
-      event.preventDefault();
-      event.stopImmediatePropagation();
-      showRegistrationClosed();
-    }
-  }, true);
-
-  // If a visitor opens the registration URL directly,
-  // display the closed notification.
-  if (window.location.hash === "#register") {
-    showRegistrationClosed();
-  }
-
-  window.addEventListener("hashchange", function () {
-    if (window.location.hash === "#register") {
-      showRegistrationClosed();
-    }
-  });
-})();
-</script>
-
+  <script>
+    (function(){
+      const overlay=document.getElementById('registrationClosedOverlay');
+      const closeButton=document.getElementById('closeRegistrationNotice');
+      let previousFocus=null;
+      function showClosed(){previousFocus=document.activeElement;overlay.classList.add('active');overlay.setAttribute('aria-hidden','false');document.body.classList.add('modal-open');closeButton.focus();}
+      function hideClosed(){overlay.classList.remove('active');overlay.setAttribute('aria-hidden','true');document.body.classList.remove('modal-open');if(previousFocus&&previousFocus.focus)previousFocus.focus();}
+      closeButton.addEventListener('click',hideClosed);
+      overlay.addEventListener('click',e=>{if(e.target===overlay)hideClosed();});
+      document.addEventListener('keydown',e=>{if(!overlay.classList.contains('active'))return;if(e.key==='Escape')hideClosed();if(e.key==='Tab'){e.preventDefault();closeButton.focus();}});
+      document.addEventListener('click',e=>{
+        const registrationLink=e.target.closest('a[href="#register"]');
+        if(registrationLink){e.preventDefault();e.stopImmediatePropagation();showClosed();}
+      },true);
+      document.getElementById('showClosedNotice').addEventListener('click',showClosed);
+      function checkHash(){if(location.hash==='#register')showClosed();}
+      window.addEventListener('hashchange',checkHash);
+      checkHash();
+    })();
+  </script>
 </body>
 </html>
